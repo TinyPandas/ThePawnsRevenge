@@ -1,7 +1,7 @@
 local Types = require(game.ServerStorage.Util.Types)
 
 return {
-	version = "0.1",
+	"0.1",
 	{
 		name = "diagonal",
 		enabled = true,
