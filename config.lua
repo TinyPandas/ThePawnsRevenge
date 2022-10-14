@@ -3,6 +3,7 @@ local Types = require(game.ServerStorage.Util.Types)
 return {
 	{
 		name = "diagonal",
+		enabled = true,
 		icon = "rbxassetid://6176342379",
 		max = -1,
 		tags = {},
@@ -15,6 +16,7 @@ return {
 	},
 	{
 		name = "trap",
+		enabled = false,
 		icon = "rbxassetid://11151568746",
 		max = 2,
 		tags = {"no-teleport", "no-spawn"},
