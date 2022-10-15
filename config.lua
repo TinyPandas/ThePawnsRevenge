@@ -7,7 +7,7 @@ local Settings = require(game.ServerStorage.Services.SettingsService):GetSetting
 local BoardController = require(game.ServerStorage.Controllers.BoardController)
 
 return {
-	"0.2",
+	"0.3",
 	{
 		name = "knight",
 		enabled = true,
@@ -85,6 +85,7 @@ return {
 		enabled = true,
 		icon = "rbxassetid://6176342066",
 		max = 6,
+		tags = Set({"no-swap", "no-spawn"})
 		entityType = "Tile",
 		getValidMoves = function(selfTile: Types.Tile): {Types.Tile}
 			return TileRuleManager.getValidForTile(selfTile)
