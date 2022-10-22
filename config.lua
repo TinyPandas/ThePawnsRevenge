@@ -6,7 +6,7 @@ local Settings = require(game.ServerStorage.Services.SettingsService):GetSetting
 local BoardController = require(game.ServerStorage.Controllers.BoardController)
 
 return {
-	"0.4",
+	"0.4r1",
 	{
 		name = "knight",
 		enabled = true,
@@ -98,7 +98,7 @@ return {
 		subset = "environment",
 		rankLimit = 1,
 		fileLimit = 1,
-		diagonalLimit = 1
+		diagonalLimit = 1,
 		value = 1,
 	},
 	{
