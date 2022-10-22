@@ -6,7 +6,7 @@ local Settings = require(game.ServerStorage.Services.SettingsService):GetSetting
 local BoardController = require(game.ServerStorage.Controllers.BoardController)
 
 return {
-	"0.3r3",
+	"0.3r4",
 	{
 		name = "knight",
 		enabled = true,
@@ -66,7 +66,7 @@ return {
 	},
 	{
 		name = "king",
-		enabled = true,
+		enabled = false,
 		icon = "rbxassetid://",
 		max = -1,
 		entityType = "Pawn",
@@ -81,7 +81,7 @@ return {
 	},
 	{
 		name = "swap",
-		enabled = true,
+		enabled = false,
 		icon = "rbxassetid://6176342066",
 		max = 6,
 		tags = Set({"no-swap", "no-spawn", "ally"}),
@@ -97,7 +97,7 @@ return {
 	},
 	{
 		name = "teleport",
-		enabled = true,
+		enabled = false,
 		icon = "rbxassetid://6176341988",
 		max = Settings.playerCount - 1,
 		tags = Set({"no-swap", "no-teleport", "no-spawn"}),
@@ -110,7 +110,7 @@ return {
 	},
 	{
 		name = "trap",
-		enabled = true,
+		enabled = false,
 		icon = "rbxassetid://11151568746",
 		max = 2,
 		tags = Set({"no-teleport", "no-spawn"}),
