@@ -6,7 +6,7 @@ local Settings = require(game.ServerStorage.Services.SettingsService):GetSetting
 local BoardController = require(game.ServerStorage.Controllers.BoardController)
 
 return {
-	"0.3r4",
+	"0.4",
 	{
 		name = "knight",
 		enabled = true,
@@ -21,6 +21,7 @@ return {
 		pattern = Vector2.new(1, 2),
 		reflect = true,
 		rotate = true,
+		value = 2,
 	},
 	{
 		name = "bishop",
@@ -34,6 +35,7 @@ return {
 		set = "core",
 		subset = "movement",
 		diagonalLimit = -1,
+		value = 2,
 	},
 	{
 		name = "queen",
@@ -48,7 +50,8 @@ return {
 		subset = "movement",
 		diagonalLimit = -1,
 		rankLimit = -1,
-		fileLimit = -1
+		fileLimit = -1,
+		value = 3,
 	},
 	{
 		name = "rook",
@@ -63,6 +66,7 @@ return {
 		subset = "movement",
 		rankLimit = -1,
 		fileLimit = -1,
+		value = 2,
 	},
 	{
 		name = "king",
@@ -77,7 +81,8 @@ return {
 		subset = "movement",
 		rankLimit = 1,
 		fileLimit = 1,
-		diagonalLimit = 1
+		diagonalLimit = 1,
+		value = 1,
 	},
 	{
 		name = "swap",
@@ -94,6 +99,7 @@ return {
 		rankLimit = 1,
 		fileLimit = 1,
 		diagonalLimit = 1
+		value = 1,
 	},
 	{
 		name = "teleport",
@@ -106,7 +112,8 @@ return {
 			return {}
 		end,
 		set = "core",
-		subset = "movement"
+		subset = "movement",
+		value = 3,
 	},
 	{
 		name = "trap",
@@ -121,6 +128,7 @@ return {
 		movedTo = function(selfTile: Types.Tile)
 			--BoardController:CapturePawn(selfTile.pawn.pawn)
 		end,
+		value = 0,
 	},
 	{
 		name = "spooky",
@@ -142,5 +150,6 @@ return {
 				-- BoardController:ModifyState(selfTile, newTile)
 			end
 		end,
+		value = 0,
 	}
 }
