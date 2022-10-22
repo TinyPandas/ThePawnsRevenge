@@ -1,13 +1,12 @@
 local Types = require(game.ServerStorage.Util.Types)
 local Set = require(game.ServerStorage.Util.Set)
 
-local TileRuleManager = require(game.ServerScriptService.TileRuleManager)
-
+local TileRuleManager = require(game.ServerStorage.TileRuleManager)
 local Settings = require(game.ServerStorage.Services.SettingsService):GetSettings(true)
 local BoardController = require(game.ServerStorage.Controllers.BoardController)
 
 return {
-	"0.3r2",
+	"0.3r3",
 	{
 		name = "knight",
 		enabled = true,
